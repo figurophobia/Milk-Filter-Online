@@ -57,11 +57,8 @@ There is also a community ARG that lives at **[passwordpassword.online](https://
 
 - **[Nikita Kryukov](https://nikita-kryukov.itch.io/)** — *Milk inside a bag of milk* — original game, art, assets and atmosphere this whole thing draws from
 - **[LucaSinUnaS](https://github.com/LucaSinUnaS)** — original [Milk Filter](https://github.com/LucaSinUnaS/Milk-Filter) algorithm
-- **[DavidSM](https://github.com/figurophobia)** — web interface, Pixel Art filter, palettes, UI
+- **[figurophobia](https://github.com/figurophobia)** — web interface, Pixel Art filter, palettes, UI
 
 ---
 
-## Support
-
-If you find it useful or just like the aesthetic:
-[ko-fi.com/davidsanchezmiguez](https://ko-fi.com/davidsanchezmiguez)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/davidsanchezmiguez)
