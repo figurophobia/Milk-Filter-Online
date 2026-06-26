@@ -535,6 +535,8 @@ h3 {
 @media (max-width: 520px) {
   .topbar h1 { font-size: 16px; }
   .topbar p { font-size: 9px; line-height: 2.4; }
+  .kofi-btn .btn-label { display: none; }
+  .kofi-btn { padding: 8px; }
   .stepper strong, .palette-stepper strong { min-width: 56px; font-size: 11px; }
   .result-viewport { max-height: 60vh; }
   #resultCanvas { max-height: 60vh; }
