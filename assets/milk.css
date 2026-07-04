@@ -1,0 +1,393 @@
+iframe{
+	border: 0;
+	overflow: hidden;
+	cursor: url("../cursors/curs.png"), auto;
+}
+img{
+	display: block;
+	width: inherit;
+}
+html{
+	cursor: url("../cursors/curs.png"), auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--mgray) var(--mblack);
+	min-height: 100%;
+}
+a {
+	color: var(--mgray);
+	cursor: url('../cursors/curspoint.png') 7 2, default;
+}
+audio{
+	display: block;
+}
+:root{
+	--mblack: #0d0d14;
+	--mgray: #52263e;
+	--mwhite: #ac3232;
+}
+::selection{
+	color: #0d0d14;
+	background: #ac3232;
+}
+p{
+	white-space-collapse: preserve;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	word-break: break-all;
+	width: inherit;
+}
+div{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+body{
+	margin-top: 0px;
+	background-color: var(--mblack);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	color: var(--mwhite)
+}
+.input{
+	cursor: url("../cursors/curstext.png") 6 11, default;
+	font-size: inherit;
+	margin-top: 0px;
+	font-family: 'Courier New', Courier, monospace;
+	background-color: transparent;
+	outline: 0;
+	border: 0;
+	padding: 0;
+	resize: none;
+	width: 36em;
+	height: 4em;
+	color: var(--mwhite);
+	overflow: hidden;
+	word-break: break-all;
+	padding-bottom: 50px;
+	position: absolute;
+}
+.nickname{
+	border: 2px solid #ac3232;
+	padding: 1px 2px;
+	position: static;
+	width: 27ch;
+	height: 1em;
+	margin-top: 10px;
+}
+.nickDiv{
+	display: flex;
+  	flex-direction: column;
+	position: fixed;
+    top: 34%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.input::placeholder {
+	color: var(--mgray);
+}
+.track-title{
+	justify-content: center;
+	display: flex;
+	margin-bottom: 4px;	
+	overflow: hidden;
+	word-break: keep-all;
+}
+.track{
+	text-align: center;
+}
+.trackSvg{
+	height: 1.5ex;
+}
+.track-button{
+	cursor: url("../cursors/curspoint.png") 7 2, default;
+	height: min-content;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: none;
+	border: none;
+}
+.player{
+	display: flex;
+	flex-direction: column;
+	width: 17%;
+	border: #ac3232;
+	position: fixed;
+	bottom: 20px;
+	right: 2%;
+}
+.controls{
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-top: 5px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.slider{
+	cursor: url("../cursors/curspoint.png") 7 2, default;
+	-webkit-appearance: none; 
+	appearance: none;
+	width: 100%;
+	height: 10px;
+	background: var(--mgray);
+	outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+	cursor: url("../cursors/curspoint.png") 7 2, default;
+}
+.slider::-webkit-slider-thumb {
+	cursor: url("../cursors/curspoint.png") 7 2, default;
+	outline: none;
+	border-radius: 0px;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 10px;
+	height: 15px;
+	background: var(--mwhite);
+	border: 0;
+}
+.slider::-moz-range-thumb {
+	cursor: url("../cursors/curspoint.png") 7 2, default;
+	border: 0;
+	outline: none;
+	border-radius: 0px;
+	width: 10px;
+	height: 15px;
+	background: var(--mwhite);
+}
+.slider::-moz-range-progress { 
+	height: 10px;
+	background: #ac3232;
+}
+#inpDiv{
+	display: flex;
+	flex-direction: center; 
+	visibility: hidden;
+}
+#clockncal{
+	cursor: url("../cursors/curspoint.png") 7 2, default;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 10px;
+	right: 1%;
+	align-items: center;
+
+}
+#clock{
+	font-size: 31px;
+}
+#date{
+	font-size: 17px;
+}
+@media only screen and (orientation:portrait) and (max-width: 500px) {
+	html{
+		padding: 0.1%;
+	}
+	#text{
+		max-width: 38em;
+	}
+	#clockncal{
+		display: none;
+	}
+	body{
+		font-size:57%;
+	}
+	.glslCanvas{
+		display: none;
+	}
+	.player{
+		width: 95vw;
+		font-size: 170%;
+		margin: 0.5%;
+		bottom: 1%;
+		left: auto;
+		right: auto;
+	}
+}
+@media only screen and (orientation:landscape) and (max-width: 1100px) {
+	#text{
+		max-width: 38em;
+	}
+	body{
+		font-size:80%;
+	}
+	.input{
+		font-size: 100%;
+	}
+	#clock{
+		font-size: 120%;
+	}
+	#date{
+		font-size: 100%;
+	}
+}
+#termimg{
+	padding-bottom: 1px;
+	width: inherit;
+}
+.yna{
+	position: fixed;
+	width:100%;
+	height: 100%;
+	left:0;
+	top:0;
+	color:#52263e;
+	pointer-events: none;
+}
+.bgtext{
+	position: fixed;
+	width:100%;
+	height: 100%;
+}
+#bgcanvas {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+.embed{
+	border: 1px solid #ac3232;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	background-color: #0d0d14;
+}
+.embedHead{
+	border: 1px solid #ac3232;
+	cursor: url('../cursors/cursmove.png') 12 12, default;
+	user-select: none;
+}
+.embedName{
+	text-overflow: ellipsis;
+	width: calc(100% - 40px);
+	overflow: hidden;
+	display: block;
+}
+.embedContent{
+	overflow: hidden;
+}
+.embedClose{
+	cursor: url('../cursors/curspoint.png') 7 2, default 
+}
+.embedTxt{
+	word-break: break-all;
+	overflow: scroll;
+	width: max-content;
+}
+.vertResize{
+	cursor: url('../cursors/cursvert.png') 12 12, default 
+}
+.horResize{
+	cursor: url('../cursors/curshor.png') 12 12, default 
+}
+.rdiagResize{
+	cursor: url('../cursors/cursdiagr.png') 12 12, default 
+}
+.ldiagResize{
+	cursor: url('../cursors/cursdiagl.png') 12 12, default 
+}
+.resizeDiv {
+	position: absolute;
+	z-index: -1;
+}
+.dim {
+	color: var(--mgray);
+}
+.pet{
+	user-select: none;
+	z-index: 2;
+	position: fixed;
+	width: 100px;
+	height: 100px;
+}
+.wavy {
+	animation-name: wavy;
+	animation-duration: 1.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+@keyframes wavy {
+	0% {
+		top: 2.5px;
+	}
+	50% {
+		top: -2.5px;
+	}
+	100% {
+		top: 2.5px;
+	}
+}
+.cursed {
+	animation-name: cursed;
+	animation-duration: .3s;
+	animation-iteration-count: infinite;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+@keyframes cursed {
+	0% { left: 0; top: 0 }
+	5% { left: -1px; top: -1px }
+	10% { left: -1px; top: -3px }
+	15% { left: 1px; top: 1px }
+	20% { left: -2px; top: 1px }
+	25% { left: -1px; top: 2px }
+	30% { left: 1px; top: -2px }
+	35% { left: 3px; top: 1px }
+	40% { left: -1px; top: 3px }
+	45% { left: 2px; top: 2px }
+	50% { left: -2px; top: 1px }
+	55% { left: 1px; top: -3px }
+	60% { left: 3px; top: 0 }
+	65% { left: 0px; top: -1px }
+	70% { left: 0; top: 2px }
+	75% { left: -1px; top: -2px }
+	80% { left: -3px; top: 0 }
+	85% { left: 1px; top: -1px }
+	90% { left: 2px; top: 1px }
+	95% { left: -2px; top: 2px }
+	100% { left: 1px; top: 0 }
+}
+.termResizeBar {
+	cursor: url('../cursors/curshor.png') 12 12, default;
+	top: 0;
+	height: 100%;
+	position: fixed;
+	width: 10px;
+	transition: background-color 0.5s cubic-bezier(.06,.42,.36,1.05);
+	transition-delay: 0.1s;
+}
+.termResizeBar:hover {
+	transition-delay: 0.5s;
+	background-color: var(--mwhite);
+}
+.rBarButt {
+	top: 50%; 
+	right: 1px;
+	position: relative;
+	color: var(--mwhite);
+}
+.pSprite {
+	width: initial;
+	z-index: 2;
+}
+.autocompDiv {
+	padding: 0;
+	color: var(--mgray);
+	pointer-events: none;
+}
+.hasPointer {
+	cursor: url('../cursors/curspoint.png') 7 2, default;
+}
