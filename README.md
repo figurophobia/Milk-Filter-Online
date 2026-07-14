@@ -5,6 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![Visitors][visitors-shield]][visitors-url]
 
 <br />
 <div align="center">
@@ -252,6 +253,8 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 [issues-url]: https://github.com/figurophobia/Milk-Filter-Online/issues
 [license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge
 [license-url]: https://github.com/figurophobia/Milk-Filter-Online/blob/main/LICENSE
+[visitors-shield]: https://komarev.com/ghpvc/?username=figurophobia&repo=Milk-Filter-Online&label=visitors&color=blueviolet&style=for-the-badge
+[visitors-url]: https://github.com/figurophobia/Milk-Filter-Online
 [JavaScript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [HTML-shield]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
