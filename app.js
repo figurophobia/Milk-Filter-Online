@@ -217,6 +217,12 @@ function canvasToBlob(canvas) {
   return new Promise((resolve) => canvas.toBlob((b) => resolve(b), 'image/png'));
 }
 
+function trackImageMade(action) {
+  if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+    window.goatcounter.count({ path: `${activeFilter}-${action}`, event: true });
+  }
+}
+
 
 function syncMuteBtn() {
   if (!sharedImageState.isVideo) {
@@ -770,6 +776,7 @@ async function copyResult() {
   try {
     await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
     statusText.textContent = t('clipboardOk');
+    trackImageMade('copy');
   } catch {
     statusText.textContent = t('clipboardDenied');
   }
@@ -781,6 +788,7 @@ function downloadImage() {
   link.download = `${activeFilter}-filter-result.png`;
   link.href = lastResultCanvas.toDataURL('image/png');
   link.click();
+  trackImageMade('save');
 }
 
 async function downloadVideo() {
@@ -880,6 +888,7 @@ async function downloadVideo() {
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 4000);
       statusText.textContent = t('videoSaved');
+      trackImageMade('save');
     }
   } catch {
     statusText.textContent = t('recordNA');
