@@ -5,7 +5,8 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![Visitors][visitors-shield]][visitors-url]
+[![Pageviews][pageviews-shield]][stats-url]
+[![Images Exported][exported-shield]][stats-url]
 
 <br />
 <div align="center">
@@ -40,6 +41,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#filters">Filters</a></li>
+    <li><a href="#stats">Stats</a></li>
     <li><a href="#inspiration">Inspiration</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -172,6 +174,25 @@ A port of the [Milk Filter](https://github.com/LucaSinUnaS/Milk-Filter) original
 
 ---
 
+## Stats
+
+Tracked with privacy-friendly, cookieless analytics ([GoatCounter](https://www.goatcounter.com/)) — no cookies, no personal data, no consent banner needed. Updated automatically once a day.
+
+Since tracking started (July 18, 2026):
+
+<!-- STATS:START -->
+* **83** pageviews
+* **31** images exported (saved or copied to clipboard)
+  * Pixel Art filter: 19 saved · 8 copied
+  * Milk filter: 2 saved · 2 copied
+
+*(last updated: 2026-07-25 00:12 UTC)*
+<!-- STATS:END -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
 ## Inspiration
 
 This project exists somewhere between fan tool and tribute. The entire visual identity — the dashed pixel borders around panels, the window chrome, the deep red-on-black color scheme, the Press Start 2P font — is a deliberate echo of the world Nikita built.
@@ -253,8 +274,9 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 [issues-url]: https://github.com/figurophobia/Milk-Filter-Online/issues
 [license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge
 [license-url]: https://github.com/figurophobia/Milk-Filter-Online/blob/main/LICENSE
-[visitors-shield]: https://komarev.com/ghpvc/?username=figurophobia&repo=Milk-Filter-Online&label=visitors&color=blueviolet&style=for-the-badge
-[visitors-url]: https://github.com/figurophobia/Milk-Filter-Online
+[pageviews-shield]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffigurophobia%2FMilk-Filter-Online%2Fmain%2Fbadges%2Fpageviews.json&style=for-the-badge
+[exported-shield]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffigurophobia%2FMilk-Filter-Online%2Fmain%2Fbadges%2Fexported.json&style=for-the-badge
+[stats-url]: #stats
 [JavaScript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [HTML-shield]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white

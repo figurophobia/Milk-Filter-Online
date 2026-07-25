@@ -460,6 +460,54 @@ h3 {
   transition: width 0.25s;
 }
 
+.android-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.android-popup.panel {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  padding: 3.75rem 2rem 2rem;
+}
+
+.android-popup p {
+  margin: 0 0 1.8rem;
+  font-size: 14px;
+  line-height: 2.1;
+  color: var(--mwhite);
+}
+
+.android-popup .button {
+  font-size: 13px;
+  padding: 1rem 1.5rem;
+}
+
+.android-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--mgray);
+  font-size: 24px;
+  line-height: 1;
+  padding: 8px;
+  cursor: url('assets/curspoint.png') 7 2, pointer;
+}
+
+.android-popup-close:hover {
+  color: var(--mwhite);
+}
+
 .result-viewport {
   position: relative;
   width: 100%;
@@ -546,6 +594,9 @@ h3 {
   .panel { padding: 0.8rem; }
   .settings-panel h2 { font-size: 13px; }
   .actions-top .button, .actions-top button, .output-actions button { font-size: 10px; padding: 0.7rem 0.6rem; }
+  .android-popup.panel { padding: 3rem 1.4rem 1.6rem; }
+  .android-popup p { font-size: 12px; }
+  .android-popup .button { font-size: 11px; padding: 0.9rem 1rem; }
 }
 
 @media (max-width: 400px) {
@@ -560,4 +611,8 @@ h3 {
   .result-viewport { max-height: 55vh; }
   #resultCanvas { max-height: 55vh; }
   h3 { font-size: 12px; }
+  .android-popup.panel { padding: 2.6rem 1rem 1.4rem; }
+  .android-popup p { font-size: 11px; }
+  .android-popup .button { font-size: 10px; padding: 0.8rem 0.8rem; }
+  .android-popup-close { top: 6px; right: 6px; font-size: 20px; }
 }

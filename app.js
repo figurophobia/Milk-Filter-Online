@@ -93,7 +93,9 @@ const TRANSLATIONS = {
     noFormat: 'No supported video format for recording.',
     videoSaved: 'Processed video downloaded.',
     on: 'On',
-    off: 'Off'
+    off: 'Off',
+    androidPopupText: 'For a better experience on Android, use the native app.',
+    androidPopupBtn: 'Get it on GitHub'
   },
   es: {
     title: 'MILK FILTER ONLINE',
@@ -133,7 +135,9 @@ const TRANSLATIONS = {
     noFormat: 'Ningun formato de video soportado.',
     videoSaved: 'Video procesado descargado.',
     on: 'On',
-    off: 'Off'
+    off: 'Off',
+    androidPopupText: 'Para una mejor experiencia en Android, usa la app nativa.',
+    androidPopupBtn: 'Ver en GitHub'
   }
 };
 
@@ -916,6 +920,26 @@ function pickVideoMime(hasAudio) {
 }
 
 // ============================================================
+// Android popup
+// ============================================================
+
+function initAndroidPopup() {
+  const DISMISSED_KEY = 'androidPopupDismissed';
+  if (!/Android/i.test(navigator.userAgent) || localStorage.getItem(DISMISSED_KEY)) return;
+
+  const overlay = document.getElementById('androidPopupOverlay');
+  const closeBtn = document.getElementById('androidPopupClose');
+  overlay.style.display = 'flex';
+
+  const dismiss = () => {
+    overlay.style.display = 'none';
+    localStorage.setItem(DISMISSED_KEY, '1');
+  };
+  closeBtn.addEventListener('click', dismiss);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) dismiss(); });
+}
+
+// ============================================================
 // Init
 // ============================================================
 
@@ -1031,4 +1055,6 @@ function pickVideoMime(hasAudio) {
   // Initial UI sync
   syncDitherUi();
   syncMilkUi();
+
+  initAndroidPopup();
 })();
