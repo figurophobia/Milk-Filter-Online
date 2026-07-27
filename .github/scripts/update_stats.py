@@ -3,6 +3,7 @@
 import json
 import os
 import re
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
@@ -42,7 +43,7 @@ def api_get(path, **params):
 def fetch_hits():
     hits, after = [], None
     while True:
-        params = {"start": "2000-01-01T00:00:00Z", "limit": 100}
+        params = {"start": "2020-01-01T00:00:00Z", "limit": 100}
         if after:
             params["after"] = after
         data = api_get("/api/v0/stats/hits", **params)
