@@ -26,15 +26,23 @@ def sort_key(order):
 def api_get(path, **params):
     qs = "&".join(f"{k}={v}" for k, v in params.items())
     url = f"{SITE}{path}?{qs}" if qs else f"{SITE}{path}"
-    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {TOKEN}"})
-    with urllib.request.urlopen(req) as resp:
-        return json.load(resp)
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json",
+    })
+    try:
+        with urllib.request.urlopen(req) as resp:
+            return json.load(resp)
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()
+        print(f"GoatCounter API error {e.code} on {path}: {body}")
+        raise
 
 
 def fetch_hits():
     hits, after = [], None
     while True:
-        params = {"start": "2000-01-01", "limit": 100}
+        params = {"start": "2000-01-01T00:00:00Z", "limit": 100}
         if after:
             params["after"] = after
         data = api_get("/api/v0/stats/hits", **params)
