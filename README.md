@@ -181,12 +181,12 @@ Tracked with privacy-friendly, cookieless analytics ([GoatCounter](https://www.g
 Since tracking started (July 18, 2026):
 
 <!-- STATS:START -->
-* **619** pageviews
-* **246** images exported (saved or copied to clipboard)
-  * Pixel Art filter: 154 saved · 37 copied
+* **629** pageviews
+* **251** images exported (saved or copied to clipboard)
+  * Pixel Art filter: 158 saved · 38 copied
   * Milk filter: 43 saved · 12 copied
 
-*(last updated: 2026-10-02 11:38 UTC)*
+*(last updated: 2026-10-06 12:30 UTC)*
 <!-- STATS:END -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
